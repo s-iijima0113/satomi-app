@@ -6,25 +6,31 @@
     <div class="user-cards">
       <div v-for="(user,i) in users" :key="i" class="user-card">
         <img :src="`https://unsplash.it/174/174?image=${user.imageId}`">
-        <div class="user-info">
-          <div>{{ user.age }}歳 {{ user.address }}</div>
-          <div>{{ user.job }}</div>
+        <div class="caption-underphoto">
+          <div class="mach-percentage-icon">
+          </div>
+          <div class="block-light">
+            <div class="sub-photo-count">
+            </div>
+            <div class="like-received-count">
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="user-card">
-        <img src="https://unsplash.it/174/174?image=903">
-        <div class="user-info">
-          <div>40才 東京</div>
-          <div>薬剤師</div>
+        <div class="caption-on-caption">
+          <div class="essential-line">
+          </div>
+          <span class="icon-online">
+          </span>
         </div>
-      </div>
-
-      <div class="user-card">
-        <img src="https://unsplash.it/174/174?image=402">
         <div class="user-info">
-          <div>30才 東京</div>
-          <div>銀行証券・保険</div>
+          <div id="age.adress">
+            {{ user.age }}歳 {{ user.address }}
+          </div>
+          <div class="occupation-line">
+            <div id="job">
+              {{ user.job }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -53,6 +59,18 @@ export default {
           age: 28,
           address: '神奈川',
           job: 'メーカー'
+        },
+        {
+          imageId: 102,
+          age: 40,
+          address: '東京',
+          job: '薬剤師'
+        },
+        {
+          imageId: 100,
+          age: 30,
+          address: '東京',
+          job: '不動産'
         }
       ]
     }
@@ -74,4 +92,25 @@ export default {
   margin: 10px;
 }
 
+.user-info {
+  padding: 13px 0 17px;
+  text-align: center;
+}
+
+.essential-line{
+  font-size: 16px;
+}
+
+.occupation-line{
+  margin:8px 0px 0px
+}
+
+#age.adress {
+  margin: 0 4px;
+  font-size: 16px;
+}
+
+#job {
+  font-size: 12px;
+}
 </style>

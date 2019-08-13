@@ -8,19 +8,24 @@
         <img :src="`https://unsplash.it/174/174?image=${user.imageId}`">
         <div class="caption-underphoto">
           <div class="mach-percentage-icon">
+            <div class="icon-match-persentage">
+              <svg viewBox="0 0 40 40" class="sda-anime" width="40" height="40" />
+              <circle class="blank" cx="20" cy="20" r="15.92" />
+              <circle class="fill" stroke-dashrray="74,26" cx="20" cy="20" r="15.92" />
+              <div class="num">
+                74
+                <span>%</span>
+              </div>
+            </div>
           </div>
           <div class="block-light">
-            <div class="sub-photo-count">
-            </div>
-            <div class="like-received-count">
-            </div>
+            <div class="sub-photo-count" />
+            <div class="like-received-count" />
           </div>
         </div>
         <div class="caption-on-caption">
-          <div class="essential-line">
-          </div>
-          <span class="icon-online">
-          </span>
+          <div class="essential-line" />
+          <span class="icon-online" />
         </div>
         <div class="user-info">
           <div id="age.adress">
@@ -90,6 +95,40 @@ export default {
   color: black;
   text-align: center;
   margin: 10px;
+}
+
+.mach-percentage-icon{
+  position: absolute;
+  left: 6px;
+  bottom: 5px;
+}
+
+.icon-match-persentage{
+  width: 40px;
+  height: 40px;
+}
+
+.blank{
+  stroke: #E3E3E3;
+  fill: #FFFFFF;
+  stroke-width: 2.5;
+}
+
+.fill{
+  stroke: #FF8D8B;
+  fill: transparent;
+  stroke-width: 2.5;
+  stroke-dashoffset: 25;
+}
+
+.num{
+  position: relative;
+  color: violet;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: -1px;
 }
 
 .user-info {

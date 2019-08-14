@@ -6,15 +6,19 @@
     <div class="user-cards">
       <div v-for="(user,i) in users" :key="i" class="user-card">
         <img :src="`https://unsplash.it/174/174?image=${user.imageId}`">
-        <div class="caption-underphoto">
-          <div class="mach-percentage-icon">
-            <div class="icon-match-persentage">
-              <svg viewBox="0 0 40 40" class="sda-anime" width="40" height="40" />
-              <circle class="blank" cx="20" cy="20" r="15.92" />
-              <circle class="fill" stroke-dashrray="74,26" cx="20" cy="20" r="15.92" />
-              <div class="num">
-                74
-                <span>%</span>
+        <div class="profile-panel">
+          <div class="main-photo" />
+          <div class="caption-under-photo">
+            <div class="mach-percentage-icon">
+              <div class="icon-match-persentage">
+                <svg viewBox="0 0 40 40" class="sda-anime" width="40" height="40">
+                  <circle class="blank" cx="20" cy="20" r="15.92" />
+                  <circle class="fill" stroke-dashrray="74,26" cx="20" cy="20" r="15.92" />
+                </svg>
+                <div class="num">
+                  74
+                  <span>%</span>
+                </div>
               </div>
             </div>
           </div>
@@ -97,10 +101,24 @@ export default {
   margin: 10px;
 }
 
+.profile-panel{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.caption-under-photo{
+  position: relative;
+  padding: 0;
+}
+
 .mach-percentage-icon{
   position: absolute;
   left: 6px;
   bottom: 5px;
+  box-sizing: border-box;
+  display: block;
 }
 
 .icon-match-persentage{

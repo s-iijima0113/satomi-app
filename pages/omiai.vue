@@ -116,7 +116,7 @@ export default {
 .mach-percentage-icon{
   position: absolute;
   left: 6px;
-  bottom: 5px;
+  bottom: 10px;
   box-sizing: border-box;
   display: block;
 }
@@ -124,6 +124,13 @@ export default {
 .icon-match-persentage{
   width: 40px;
   height: 40px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.sda-anime{
+  position: absolute;
+  left: 0;
 }
 
 .blank{
@@ -147,6 +154,11 @@ export default {
   text-align: center;
   line-height: 40px;
   letter-spacing: -1px;
+  box-sizing: border-box;
+}
+
+.num span{
+  font-size: 8px;
 }
 
 .user-info {

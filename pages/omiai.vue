@@ -24,7 +24,10 @@
           </div>
           <div class="block-light">
             <div class="sub-photo-count" />
+            <span class="icon-camera" />
+            <span class="count">1</span>
             <div class="like-received-count" />
+            <span class="icon-interest-pink" />
           </div>
         </div>
         <div class="caption-on-caption">
@@ -172,6 +175,18 @@ export default {
 
 .occupation-line{
   margin:8px 0px 0px
+}
+
+.sub-photo-count{
+  margin-bottom: 6px;
+  padding: 5px 8px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #aa00aa;
+  font-size: 12px;
+  line-height: 0.9;
+  box-sizing: border-box;
+  display: block;
 }
 
 #age.adress {

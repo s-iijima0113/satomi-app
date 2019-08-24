@@ -23,19 +23,19 @@
             </div>
           </div>
           <div class="block-light">
-            <div class="sub-photo-count" />
-            <span class="icon-camera" />
-            <span class="count">1</span>
-            <div class="like-received-count" />
-            <span class="icon-interest-pink" />
+            <div class="sub-photo-count">
+              <span class="icon-camera" />
+              <span class="count">1</span>
+            </div>
+            <div class="like-received-count">
+              <span class="icon-interest-pink" />
+              <span>~5</span>
+            </div>
           </div>
-        </div>
-        <div class="caption-on-caption">
-          <div class="essential-line" />
-          <span class="icon-online" />
         </div>
         <div class="user-info">
           <div id="age.adress">
+            <span class="icon-online" />
             {{ user.age }}歳 {{ user.address }}
           </div>
           <div class="occupation-line">
@@ -164,13 +164,76 @@ export default {
   font-size: 8px;
 }
 
+.block-light{
+  position: absolute;
+  right: 8px;
+  bottom: 2px;
+  box-sizing: border-box;
+}
+
+.sub-photo-count{
+  margin-bottom: 6px;
+  padding: 5px 8px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #A0A0A0;
+  font-size: 12px;
+  line-height: 0.9px;
+  box-sizing: border-box;
+}
+
+.icon-camera{
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+  background-image: url("https://www.google.com/search?biw=1302&bih=894&tbm=isch&sa=1&ei=wcpfXc_CBY_N-QbhgpvYBQ&q=%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3&oq=%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3&gs_l=img.3..0j0i24l6.1553.11516..11906...9.0..4.574.6392.2j25j6j1j0j1......0....1..gws-wiz-img.....0..35i39j0i4j0i4i24.ZtFNsiStuxM&ved=0ahUKEwiPp6Pc7pjkAhWPZt4KHWHBBlsQ4dUDCAY&uact=5#imgrc=_");
+  background-size: 100%;
+  box-sizing: border-box;
+}
+
+.count{
+  margin-left: 4px;
+  box-sizing: border-box;
+}
+
+.like-received-count{
+  margin-bottom: 6px;
+  padding: 5px 8px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #FF8D8B;
+  font-size: 12px;
+  line-height: 0.9;
+  box-sizing: border-box;
+}
+
+.icon-interest-pink{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: transparent url(/omiai/img/icon/interest_pink.svg) center no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+}
+
 .user-info {
   padding: 13px 0 17px;
   text-align: center;
 }
 
 .essential-line{
+  margin: 0 4px;
   font-size: 16px;
+}
+
+.icon-online{
+  background-color: #C0E452;
+  margin: 0px 4px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 100%;
+  box-sizing: border-box;
 }
 
 .occupation-line{

@@ -15,9 +15,9 @@
                   <circle class="blank" cx="20" cy="20" r="15.92" />
                   <circle class="fill" stroke-dashrray="74,26" cx="20" cy="20" r="15.92" />
                 </svg>
-                <div class="num">
-                  74
-                  <span>%</span>
+                <div id="num">
+                  {{ user.num }}
+                  <span class="num-span">%</span>
                 </div>
               </div>
             </div>
@@ -25,11 +25,13 @@
           <div class="block-light">
             <div class="sub-photo-count">
               <span class="icon-camera" />
-              <span class="count">1</span>
+              <span id="photonum" />
+              {{ user.photonum }}
             </div>
             <div class="like-received-count">
               <span class="icon-interest-pink" />
-              <span>~5</span>
+              <span class="likereceivednum" />
+              {{ user.likereceivedcount }}
             </div>
           </div>
         </div>
@@ -58,31 +60,64 @@ export default {
           imageId: 903,
           age: 29,
           address: '東京',
-          job: '薬剤師'
+          job: '薬剤師',
+          num: '100',
+          photonum: '5',
+          likereceivedcount: '100'
         },
         {
           imageId: 402,
           age: 28,
           address: '東京',
-          job: '銀行証券・保険'
+          job: '銀行証券・保険',
+          num: '90',
+          photonum: '2',
+          likereceivedcount: '200'
         },
         {
           imageId: 200,
           age: 28,
           address: '神奈川',
-          job: 'メーカー'
+          job: 'メーカー',
+          num: '80',
+          photonum: '3',
+          likereceivedcount: '150'
         },
         {
           imageId: 102,
           age: 40,
           address: '東京',
-          job: '薬剤師'
+          job: '薬剤師',
+          num: '78',
+          photonum: '10',
+          likereceivedcount: '300'
         },
         {
           imageId: 100,
           age: 30,
           address: '東京',
-          job: '不動産'
+          job: '不動産',
+          num: '20',
+          photonum: '3',
+          likereceivedcount: '500'
+        },
+        {
+          imageId: 101,
+          age: 32,
+          address: '神奈川',
+          job: '人材',
+          num: '60',
+          photonum: '8',
+          likereceivedcount: '800'
+        },
+        {
+          imageId: 105,
+          age: 34,
+          address: '埼玉',
+          job: '事務',
+          num: '90',
+          photonum: '3',
+          likereceivedcount: '500'
         }
       ]
     }
@@ -149,26 +184,16 @@ export default {
   stroke-dashoffset: 25;
 }
 
-.num{
-  position: relative;
-  color: violet;
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 40px;
-  letter-spacing: -1px;
-  box-sizing: border-box;
-}
-
-.num span{
+.num-span{
   font-size: 8px;
 }
 
 .block-light{
   position: absolute;
   right: 8px;
-  bottom: 2px;
+  bottom: 10px;
   box-sizing: border-box;
+  display: block;
 }
 
 .sub-photo-count{
@@ -186,7 +211,7 @@ export default {
   display: inline-block;
   width: 12px;
   height: 10px;
-  background-image: url("https://www.google.com/search?biw=1302&bih=894&tbm=isch&sa=1&ei=wcpfXc_CBY_N-QbhgpvYBQ&q=%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3&oq=%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3&gs_l=img.3..0j0i24l6.1553.11516..11906...9.0..4.574.6392.2j25j6j1j0j1......0....1..gws-wiz-img.....0..35i39j0i4j0i4i24.ZtFNsiStuxM&ved=0ahUKEwiPp6Pc7pjkAhWPZt4KHWHBBlsQ4dUDCAY&uact=5#imgrc=_");
+  background-image: url("~assets/camera.jpg");
   background-size: 100%;
   box-sizing: border-box;
 }
@@ -194,6 +219,7 @@ export default {
 .count{
   margin-left: 4px;
   box-sizing: border-box;
+  color: #A0A0A0;
 }
 
 .like-received-count{
@@ -205,13 +231,14 @@ export default {
   font-size: 12px;
   line-height: 0.9;
   box-sizing: border-box;
+  display: block;
 }
 
 .icon-interest-pink{
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: transparent url(/omiai/img/icon/interest_pink.svg) center no-repeat;
+  background: url("~assets/like-it.jpeg");
   background-size: 100%;
   box-sizing: border-box;
 }
@@ -240,21 +267,36 @@ export default {
   margin:8px 0px 0px
 }
 
-.sub-photo-count{
-  margin-bottom: 6px;
-  padding: 5px 8px;
-  border-radius: 100px;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #aa00aa;
+#num {
+  position: relative;
+  color: #FF8D8B;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: -1px;
+  box-sizing: border-box;
+}
+
+#photonum {
+  margin-left: 4px;
+  box-sizing: border-box;
+  color: #A0A0A0;
+  font-size: 12px;
+  line-height: 0.9px;
+}
+
+#likereceivedcount {
+  color: #FF8D8B;
   font-size: 12px;
   line-height: 0.9;
   box-sizing: border-box;
-  display: block;
 }
 
 #age.adress {
   margin: 0 4px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 #job {

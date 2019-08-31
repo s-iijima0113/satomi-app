@@ -13,7 +13,7 @@
               <div class="icon-match-persentage">
                 <svg viewBox="0 0 40 40" class="sda-anime" width="40" height="40">
                   <circle class="blank" cx="20" cy="20" r="15.92" />
-                  <circle class="fill" stroke-dashrray="74,26" cx="20" cy="20" r="15.92" />
+                  <circle class="fill" :stroke-dasharray="`${user.num},${100-user.num}`" cx="20" cy="20" r="15.92" />
                 </svg>
                 <div id="num">
                   {{ user.num }}
@@ -61,7 +61,7 @@ export default {
           age: 29,
           address: '東京',
           job: '薬剤師',
-          num: '100',
+          num: 100,
           photonum: '5',
           likereceivedcount: '100'
         },
@@ -70,7 +70,7 @@ export default {
           age: 28,
           address: '東京',
           job: '銀行証券・保険',
-          num: '90',
+          num: 90,
           photonum: '2',
           likereceivedcount: '200'
         },
@@ -79,7 +79,7 @@ export default {
           age: 28,
           address: '神奈川',
           job: 'メーカー',
-          num: '80',
+          num: 80,
           photonum: '3',
           likereceivedcount: '150'
         },
@@ -88,7 +88,7 @@ export default {
           age: 40,
           address: '東京',
           job: '薬剤師',
-          num: '78',
+          num: 78,
           photonum: '10',
           likereceivedcount: '300'
         },
@@ -97,7 +97,7 @@ export default {
           age: 30,
           address: '東京',
           job: '不動産',
-          num: '20',
+          num: 20,
           photonum: '3',
           likereceivedcount: '500'
         },
@@ -106,16 +106,16 @@ export default {
           age: 32,
           address: '神奈川',
           job: '人材',
-          num: '60',
+          num: 60,
           photonum: '8',
           likereceivedcount: '800'
         },
         {
-          imageId: 105,
+          imageId: 103,
           age: 34,
           address: '埼玉',
           job: '事務',
-          num: '90',
+          num: 90,
           photonum: '3',
           likereceivedcount: '500'
         }
@@ -171,13 +171,13 @@ export default {
   left: 0;
 }
 
-.blank{
+svg .blank{
   stroke: #E3E3E3;
   fill: #FFFFFF;
   stroke-width: 2.5;
 }
 
-.fill{
+svg .fill{
   stroke: #FF8D8B;
   fill: transparent;
   stroke-width: 2.5;
@@ -261,6 +261,7 @@ export default {
   display: inline-block;
   border-radius: 100%;
   box-sizing: border-box;
+  animation: icon-flashing
 }
 
 .occupation-line{

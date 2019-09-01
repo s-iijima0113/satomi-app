@@ -157,6 +157,7 @@ export default {
   bottom: 10px;
   box-sizing: border-box;
   display: block;
+  animation: 2s linear infinite blink_effect;
 }
 
 .icon-match-persentage{
@@ -261,7 +262,16 @@ svg .fill{
   display: inline-block;
   border-radius: 100%;
   box-sizing: border-box;
-  animation: icon-flashing
+}
+
+.icon-online{
+  animation: icon-online 2s infinite;
+}
+
+@keyframes icon-online{
+  50%{
+    opacity: 0;
+  }
 }
 
 .occupation-line{

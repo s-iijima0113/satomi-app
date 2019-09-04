@@ -3,6 +3,7 @@
     <div class="header">
       詳細プロフィール
     </div>
+    <body class="style" />
     <div class="model-content">
       <div class="row">
         <div id="modal-member-detail-main-photo">
@@ -15,7 +16,7 @@
                 </svg>
                 <div class="num">
                   <span class="text">マッチ度</span>
-                  86
+                  "86"
                   <span class="symbol">%</span>
                 </div>
               </div>
@@ -31,7 +32,7 @@
                 <span id="basis-area">東京</span>
               </div>
               <div class="statas-area">
-                <ul></ul>
+                <ul />
               </div>
             </div>
             <div class="tab-content">
@@ -120,5 +121,79 @@ export default {
 .header {
   background: white;
   color: black;
+}
+
+.style{
+  background-color: #EEEEEE;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.42857;
+  color: #333333;
+  margin: 0;
+  box-sizing: 0;
+  display: block;
+}
+
+.model-content{
+  box-sizing: border-box;
+  display: block;
+}
+
+.row{
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-member-detail-main-photo{
+  max-width: 395px;
+  border-radius: 5px;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  height: auto;
+  background-color: #fAF9f7;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.match-percentage-icon{
+  display: inline-block;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.match-percentage-large{
+  display: inline-block;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.sda-anime{
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+svg .blank{
+  stroke: #E3E3E3;
+  fill: #FFFFFF;
+  stroke-width: border-box;
+}
+
+svg .fill{
+  stroke: #FF8D8B;
+  fill: transparent;
+  stroke-width: 2.5;
+  stroke-dashoffset: 25;
+  box-sizing: border-box;
 }
 </style>

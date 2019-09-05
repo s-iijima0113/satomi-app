@@ -170,11 +170,10 @@ export default {
 }
 
 .match-percentage-large{
-  display: inline-block;
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  box-sizing: border-box;
+  display: block;
 }
 
 .sda-anime{
@@ -196,4 +195,26 @@ svg .fill{
   stroke-dashoffset: 25;
   box-sizing: border-box;
 }
+
+.num{
+  display: table-cell;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+  color: #FF8D8B;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.0;
+  letter-spacing: -1px;
+  box-sizing: border-box
+}
+
+.text{
+  display: block;
+  margin-bottom: 0;
+  font-size: 9px;
+}
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <body class="style">
+  <div class="style">
     <div class="header">
       詳細プロフィール
     </div>
@@ -50,7 +50,7 @@
     </div>
     </div>
     </div>
-  </body>
+  </div>
 </template>
 
 <script>
@@ -132,15 +132,14 @@ export default {
 }
 
 .container-serch{
-  max-width: 804px;
-  width: 100%;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
 }
 
 .style{
-  background-color: rgb(124, 29, 29);
+  background-color: rgb(250, 253, 56);
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.42857;
@@ -161,7 +160,11 @@ export default {
   padding-right: 20px;
   padding: 0;
   margin: 0;
+  margin-left: -10px;
+  margin-right: -10px;
   box-sizing: border-box;
+  display: block;
+  height: 800px;
 }
 
 .modal-member-detail-main-photo{
@@ -174,6 +177,20 @@ export default {
   background-color: rgb(248, 247, 250);
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.inner{
+  border-radius: 5px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
 }
 
 .match-percentage-icon{

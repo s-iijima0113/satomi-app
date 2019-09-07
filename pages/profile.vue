@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <body class="style">
     <div class="header">
       詳細プロフィール
     </div>
-    <body class="style" />
+    <div id="container" class="container-serch">
+      <div class="bottom-area">
     <div class="model-content">
       <div class="row">
         <div id="modal-member-detail-main-photo">
@@ -47,9 +48,9 @@
         </div>
       </div>
     </div>
-  </div>
-  </div>
-  </div>
+    </div>
+    </div>
+  </body>
 </template>
 
 <script>
@@ -123,8 +124,23 @@ export default {
   color: black;
 }
 
+.bottom-area{
+  padding-bottom: 100px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  display: block;
+}
+
+.container-serch{
+  max-width: 804px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
 .style{
-  background-color: #EEEEEE;
+  background-color: rgb(124, 29, 29);
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.42857;
@@ -145,6 +161,7 @@ export default {
   padding-right: 20px;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .modal-member-detail-main-photo{
@@ -154,7 +171,7 @@ export default {
   padding-left: 0;
   padding-right: 0;
   height: auto;
-  background-color: #fAF9f7;
+  background-color: rgb(248, 247, 250);
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -215,6 +232,43 @@ svg .fill{
   display: block;
   margin-bottom: 0;
   font-size: 9px;
+}
+
+.symbol{
+ font-size: 13px;
+ box-sizing: border-box;
+}
+
+.main{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.nicname{
+  margin: 0 8px;
+  font-size: 26px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.basis-age{
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+}
+
+.basis-area{
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+}
+
+.statas-area{
+  box-sizing: border-box;
+  display: block;
 }
 
 </style>

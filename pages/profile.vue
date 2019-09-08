@@ -22,6 +22,8 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
         <div class="sub-photo-area">
           <div class="sub-photo-line" />
           <div class="photo-first" />
@@ -185,6 +187,7 @@ export default {
   width: 80%;
   background-color: yellow;
   display: inline-block;
+  float: left;
 }
 
 .modal-member-detail-main-photo::before{
@@ -280,9 +283,10 @@ svg .fill{
   padding-left: 15px;
   padding-right: 0;
   width: 20%;
-  float: right;
+  float: left;
   position: relative;
   min-height: 1px;
+  height: 368px;
   box-sizing: border-box;
   background-color: aqua
   }

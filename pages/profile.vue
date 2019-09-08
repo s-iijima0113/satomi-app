@@ -11,20 +11,20 @@
           <div class="inner">
             <div class="match-percentage-icon">
               <div class="match-percentage-large">
-                <svg viewbox="0 0 40 40" class="sda-anime" width="70" height="70">
+                <svg viewBox="0 0 40 40" class="sda-anime" width="40" height="40">
                   <circle class="blank" cx="20" cy="20" r="15.92" />
                   <circle class="fill" stroke-dasharray="86,14" cx="20" cy="20" r="15.92" />
                 </svg>
                 <div class="num">
                   <span class="text">マッチ度</span>
-                  "86"
+                  86
                   <span class="symbol">%</span>
                 </div>
               </div>
             </div>
-            <div class="sub-photo-area">
-              <div class="sub-photo-line" />
-              <div class="photo-first" />
+        <div class="sub-photo-area">
+          <div class="sub-photo-line" />
+          <div class="photo-first" />
             </div>
             <div class="main">
               <div>
@@ -160,7 +160,7 @@ export default {
   padding-right: 20px;
   box-sizing: border-box;
   display: block;
-  height:800px;
+  height:480px;
 }
 
 .content-row::before{
@@ -179,11 +179,12 @@ export default {
   position: relative;
   padding-left: 0;
   padding-right: 0;
-  height: 400px;
+  height: 368px;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 79.16667%;
+  width: 80%;
   background-color: yellow;
+  display: inline-block;
 }
 
 .modal-member-detail-main-photo::before{
@@ -223,9 +224,12 @@ export default {
   height: 70px;
   box-sizing: border-box;
   display: block;
+  box-sizing: border-box;
 }
 
 .sda-anime{
+  width: 70px;
+  height: 70px;
   position: absolute;
   overflow: hidden;
   box-sizing: border-box;
@@ -234,7 +238,7 @@ export default {
 svg .blank{
   stroke: #E3E3E3;
   fill: #FFFFFF;
-  stroke-width: border-box;
+  stroke-width: 2.5px;
 }
 
 svg .fill{
@@ -264,12 +268,24 @@ svg .fill{
   display: block;
   margin-bottom: 0;
   font-size: 9px;
+  box-sizing: border-box;
 }
 
 .symbol{
  font-size: 13px;
  box-sizing: border-box;
 }
+
+.sub-photo-area{
+  padding-left: 15px;
+  padding-right: 0;
+  width: 20%;
+  float: right;
+  position: relative;
+  min-height: 1px;
+  box-sizing: border-box;
+  background-color: aqua
+  }
 
 .main{
   margin-top: 25px;

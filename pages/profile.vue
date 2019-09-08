@@ -6,8 +6,8 @@
     <div id="container" class="container-serch">
       <div class="bottom-area">
     <div class="model-content">
-      <div class="row">
-        <div id="modal-member-detail-main-photo">
+      <div class="content-row">
+        <div class="modal-member-detail-main-photo">
           <div class="inner">
             <div class="match-percentage-icon">
               <div class="match-percentage-large">
@@ -139,7 +139,7 @@ export default {
 }
 
 .style{
-  background-color: rgb(250, 253, 56);
+  background-color: plum;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.42857;
@@ -154,17 +154,23 @@ export default {
   display: block;
 }
 
-.row{
+.content-row{
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  padding: 0;
-  margin: 0;
-  margin-left: -10px;
-  margin-right: -10px;
   box-sizing: border-box;
   display: block;
-  height: 800px;
+  height:800px;
+}
+
+.content-row::before{
+  content: " ";
+  display: table;
+  box-sizing: border-box;
+}
+
+.row::after{
+  clear: both;
 }
 
 .modal-member-detail-main-photo{
@@ -173,10 +179,18 @@ export default {
   position: relative;
   padding-left: 0;
   padding-right: 0;
-  height: auto;
-  background-color: rgb(248, 247, 250);
+  height: 400px;
   background-position: center center;
   background-repeat: no-repeat;
+  width: 79.16667%;
+  background-color: yellow;
+}
+
+.modal-member-detail-main-photo::before{
+  display: block;
+  padding-top: 100%;
+  content: "";
+  box-sizing: border-box;
 }
 
 .inner{
@@ -191,6 +205,7 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   box-sizing: border-box;
+  background-image: url("~assets/human.png");
 }
 
 .match-percentage-icon{

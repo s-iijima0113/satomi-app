@@ -5,77 +5,69 @@
     </div>
     <div id="container" class="container-serch">
       <div class="bottom-area">
-    <div class="model-content">
-      <div class="content-row">
-        <div class="modal-member-detail-main-photo">
-          <div class="inner">
-            <div class="match-percentage-icon">
-              <div class="match-percentage-large">
-                <svg viewBox="0 0 40 40" class="sda-anime" width="40" height="40">
-                  <circle class="blank" cx="20" cy="20" r="15.92" />
-                  <circle class="fill" stroke-dasharray="86,14" cx="20" cy="20" r="15.92" />
-                </svg>
-                <div class="num">
-                  <span class="text">マッチ度</span>
-                  86
-                  <span class="symbol">%</span>
+        <div class="model-content">
+          <div class="content-row">
+            <div class="modal-member-detail-main-photo">
+              <div class="inner">
+                <div class="match-percentage-icon">
+                  <div class="match-percentage-large">
+                    <svg viewBox="0 0 40 40" class="sda-anime" width="40" height="40">
+                      <circle class="blank" cx="20" cy="20" r="15.92" />
+                      <circle class="fill" stroke-dasharray="86,14" cx="20" cy="20" r="15.92" />
+                    </svg>
+                    <div class="num">
+                      <span class="text">マッチ度</span>
+                      86
+                      <span class="symbol">%</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="sub-photo-area">
-          <div class="sub-photo-line" />
-          <div class="photo-first" />
-        </div>
-      </div>
-            <div class="main">
-              <div>
-                <span id="basis-nickname" class="nicname">T.K</span>
-                <span id="basis-age">34歳 / </span>
-                <span id="basis-area">東京</span>
-              </div>
-              <div class="statas-area">
-                <ul class="status">
-                  <li id="online-status">
-                    <span class="icon-online" />
-                    <span class="online-text">オンライン</span>
-                  </li>
-                  <li id="age-confirmed">
-                    <span class="age-confirmed-icon" />
-                    <span>認証済み</span>
-                  </li>
-                  <li id="interest">
-                    <span class="interest-pink" />
-                    <span>いいね！</span>
-                  </li>
-                </ul>
-              </div>
+            <div class="sub-photo-area">
+              <div class="sub-photo-center" />
+              <div class="photo-first" />
             </div>
-            <div class="tab-content">
-              <div id="tab-profile" class="tab-pane-active">
-                <h2 id="introduction-title" class="title-with-background">
-                  <span class="inner-text">自己紹介文</span>
-                </h2>
-                <p id="detail-introduction" class="self-introduction-text" />
-              </div>
+          </div>
+          <div class="main">
+            <div>
+              <span id="basis-nickname" class="nicname">T.K</span>
+              <span id="basis-age">34歳 / </span>
+              <span id="basis-area">東京</span>
+            </div>
+            <div class="statas-area">
+              <ul class="status">
+                <li class="online-status">
+                  <span class="icon-online" />
+                  <span class="online-text">オンライン</span>
+                </li>
+                <li class="age-confirmed">
+                  <span class="age-confirmed-icon" />
+                  <span>認証済み</span>
+                </li>
+                <li class="interest">
+                  <span class="interest-pink" />
+                  <span>いいね！</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div id="tab-profile" class="tab-pane-active">
+              <h2 id="introduction-title" class="title-with-background">
+                <span class="inner-text">自己紹介文</span>
+              </h2>
+              <p id="detail-introduction" class="self-introduction-text" />
             </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    profile () {
-      return this.profiles[+this.$route.query.userId]
-    }
-  },
   data () {
     return {
       profiles: [
@@ -129,6 +121,11 @@ export default {
 `
         }
       ]
+    }
+  },
+  computed: {
+    profile () {
+      return this.profiles[+this.$route.query.userId]
     }
   }
 }
@@ -200,7 +197,6 @@ export default {
   background-repeat: no-repeat;
   width: 80%;
   background-color: yellow;
-  display: inline-block;
   float: left;
 }
 
@@ -294,16 +290,20 @@ svg .fill{
 }
 
 .sub-photo-area{
-  padding-left: 15px;
-  padding-right: 0;
   width: 20%;
   float: left;
   position: relative;
   min-height: 1px;
   height: 368px;
   box-sizing: border-box;
-  background-color: aqua
+  padding-left: 15px;
   }
+
+.sub-photo-center{
+  background-color: aquamarine;
+  height: 100%;
+  padding-left: 20px;
+}
 
 .main{
   margin-top: 25px;
@@ -315,7 +315,7 @@ svg .fill{
 
 .status{
   font-size: 13px;
-  margin: 20px;
+  margin: 20px 0;
   padding: 0;
   box-sizing: border-box;
   display: block;
@@ -325,6 +325,27 @@ svg .fill{
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 40px;
+}
+
+.online-status{
+  display: inline-block;
+  list-style: none;
+  flex-grow: 1;
+  padding-right: 10px;
+  box-sizing:border-box;
+}
+
+.icon-online{
+  width: 14px;
+  height: 14px;
+  background-color: #C0E452;
+  display: inline-block;
+  border-radius: 100%;
+  margin-bottom: -1px;
+}
+
+.icon-online{
+  animation: icon-online 2s infinite;
 }
 
 .nicname{

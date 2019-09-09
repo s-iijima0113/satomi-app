@@ -27,15 +27,29 @@
         <div class="sub-photo-area">
           <div class="sub-photo-line" />
           <div class="photo-first" />
-            </div>
+        </div>
+      </div>
             <div class="main">
               <div>
                 <span id="basis-nickname" class="nicname">T.K</span>
-                <span id="basis-age">34歳</span>
+                <span id="basis-age">34歳 / </span>
                 <span id="basis-area">東京</span>
               </div>
               <div class="statas-area">
-                <ul />
+                <ul class="status">
+                  <li id="online-status">
+                    <span class="icon-online" />
+                    <span class="online-text">オンライン</span>
+                  </li>
+                  <li id="age-confirmed">
+                    <span class="age-confirmed-icon" />
+                    <span>認証済み</span>
+                  </li>
+                  <li id="interest">
+                    <span class="interest-pink" />
+                    <span>いいね！</span>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="tab-content">
@@ -162,7 +176,7 @@ export default {
   padding-right: 20px;
   box-sizing: border-box;
   display: block;
-  height:480px;
+  height:400px;
 }
 
 .content-row::before{
@@ -297,6 +311,20 @@ svg .fill{
   font-size: 18px;
   text-align: center;
   box-sizing: border-box;
+}
+
+.status{
+  font-size: 13px;
+  margin: 20px;
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 }
 
 .nicname{

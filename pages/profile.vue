@@ -47,13 +47,13 @@
                 </li>
                 <li class="interest">
                   <span class="interest-pink" />
-                  <span>いいね！</span>
+                  <span>いいね！ : 212  </span>
                 </li>
               </ul>
             </div>
           </div>
           <div class="tab-content">
-            <div id="tab-profile" class="tab-pane-active">
+            <div id="tab-pane-active" class="tab-profile">
               <h2 id="introduction-title" class="title-with-background">
                 <span class="inner-text">自己紹介文</span>
               </h2>
@@ -348,6 +348,54 @@ svg .fill{
   animation: icon-online 2s infinite;
 }
 
+.online-text{
+  box-sizing: border-box;
+}
+
+@keyframes icon-online{
+  50%{
+    opacity: 0;
+  }
+}
+
+.age-confirmed{
+  padding-left: 10px;
+  border-left: 1px solid #E3E3E3;
+  display: inline-block;
+  list-style: none;
+  flex-grow: 1;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.age-confirmed-icon{
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+  background-size: 70%;
+  box-sizing: border-box;
+  background-image: url("~assets/age-confirm.jpg");
+}
+
+.interest{
+  padding-left: 10px;
+  border-left: 1px;
+  display: inline-block;
+  list-style: none;
+  flex-grow: 1;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.interest-pink{
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background-size: 100%;
+  box-sizing: border-box;
+  background-image: url("~assets/like-it.jpeg");
+}
+
 .nicname{
   margin: 0 8px;
   font-size: 26px;
@@ -370,6 +418,63 @@ svg .fill{
 .statas-area{
   box-sizing: border-box;
   display: block;
+}
+
+.tab-content{
+  box-sizing: border-box;
+  display: block;
+}
+
+.tab-profile{
+  display: block;
+  box-sizing: border-box;
+}
+
+.title-with-background{
+  margin-top: -1px;
+  position: relative;
+  height: 50px;
+  margin: 0;
+  border-top: 1px solid #E3E3E3;
+  border-bottom: 1px solid #E3E3E3;
+  background: #FAF9F7;
+  font-size: 30px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  box-sizing: border-box;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.inner-text{
+  left: 20px;
+  position: absolute;
+  bottom: 10px;
+  color: #2D2E2D;
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+  font-family: inherit;
+  line-height: 1.1;
+}
+
+.self-introduction-text{
+  padding: 15px 23px 10px;
+  font-size: 16px;
+  line-height: 24px;
+  word-wrap: break-word;
+  margin: 0 0 10px;
+  box-sizing: border-box;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 </style>

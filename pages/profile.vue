@@ -8,7 +8,7 @@
         <div class="model-content">
           <div class="content-row">
             <div class="modal-member-detail-main-photo">
-              <div class="inner">
+              <div class="main-inner">
                 <div class="match-percentage-icon">
                   <div class="match-percentage-large">
                     <svg viewBox="0 0 40 40" class="sda-anime" width="40" height="40">
@@ -25,8 +25,18 @@
               </div>
             </div>
             <div class="sub-photo-area">
-              <div class="sub-photo-center" />
-              <div class="photo-first" />
+              <div class="sub-photo-center">
+                <div class="sub-photo">
+                  <div class="inner-first" />
+                  <div class="flame-selected" />
+                </div>
+                <div class="sub-photo">
+                  <div class="inner-second" />
+                  <div class="flame" />
+                </div>
+                <div class="sub-photo" />
+                <div class="sub-photo" />
+              </div>
             </div>
           </div>
           <div class="main">
@@ -57,7 +67,9 @@
               <h2 id="introduction-title" class="title-with-background">
                 <span class="inner-text">自己紹介文</span>
               </h2>
-              <p id="detail-introduction" class="self-introduction-text" />
+              <p id="detail-introduction" class="detail-introduction">
+                {{ profile.content }}
+              </p>
             </div>
           </div>
         </div>
@@ -132,7 +144,7 @@ export default {
 </script>
 
 <style scoped>
-.header {
+.header{
   background: white;
   color: black;
 }
@@ -207,7 +219,7 @@ export default {
   box-sizing: border-box;
 }
 
-.inner{
+.main-inner{
   border-radius: 5px;
   display: inline-block;
   position: absolute;
@@ -300,9 +312,73 @@ svg .fill{
   }
 
 .sub-photo-center{
-  background-color: aquamarine;
+  background-color: ivory;
   height: 100%;
-  padding-left: 20px;
+}
+
+.sub-photo{
+  display: inline-block;
+  letter-spacing: 0;
+  vertical-align: middle;
+  float: none;
+  max-width: 88px;
+  margin-bottom: 14.3px;
+  position: relative;
+  padding: 0;
+  height: auto;
+  border-radius: 5px;
+  background-color: #FAF9F7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100%
+}
+
+.sub-photo::before{
+  display: block;
+  padding-top: 100%;
+  content: "";
+}
+
+.inner-first{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-image: url("~assets/sub-photo-first.png");
+}
+
+.flame-selected{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #3F9AD1;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.inner-second{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-image: url("~assets/sub-photo-second.png");
 }
 
 .main{
@@ -463,7 +539,7 @@ svg .fill{
   line-height: 1.1;
 }
 
-.self-introduction-text{
+.detail-introduction{
   padding: 15px 23px 10px;
   font-size: 16px;
   line-height: 24px;
@@ -475,6 +551,7 @@ svg .fill{
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  height:300px;
 }
 
 </style>
